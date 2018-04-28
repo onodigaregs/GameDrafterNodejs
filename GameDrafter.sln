@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GameDrafter.Server", "GameDrafter.Server\GameDrafter.Server.njsproj", "{002A5356-456B-40BA-AD79-21B6D01DC495}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{002A5356-456B-40BA-AD79-21B6D01DC495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002A5356-456B-40BA-AD79-21B6D01DC495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002A5356-456B-40BA-AD79-21B6D01DC495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002A5356-456B-40BA-AD79-21B6D01DC495}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D6608DA-5B97-4CAD-8DE1-F2B49D85E95B}
+	EndGlobalSection
+EndGlobal
