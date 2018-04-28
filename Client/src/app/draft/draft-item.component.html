@@ -1,0 +1,6 @@
+<div *ngFor="let draftItem of items" class="characterContainer btn btn-primary">
+  <img src="{{draftItem.character.Icon}}" />
+  <p>{{draftItem.character.Name}}</p>
+</div>
+<div class="row" *ngIf="items && items.length > 0">
+</div>

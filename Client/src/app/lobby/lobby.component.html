@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="btn-group btn-group-toggle" ngbRadioGroup name="lobbyType" [(ngModel)]="lobby.isLocal">
+    <label ngbButtonLabel class="btn-primary" (click)="createMultiplayerLobby();">
+      <input ngbButton type="radio" [value]="false"> Multiplayer
+    </label>
+    <label ngbButtonLabel class="btn-primary" (click)="createLocalLobby();">
+      <input ngbButton type="radio" value="true" > Local
+    </label>
+
+  </div>
+</div>
+<div *ngIf="lobby.isLocal">
+  <div class="row">
+    <div class="col">
+ 
+        <input name="addPlayerInput" (keyup.enter)="addPlayer()" [(ngModel)]="currentPlayer" id="addPlayerInput" type="text" placeholder="Add player..." />        
+   
+      <button (click)="addPlayer()" class="btn btn-primary"><i  class="fa fa-check-square"></i></button>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let player of lobby.players" class="col">
+      <div class="playericon bg-primary text-white">{{player}}</div>
+
+    </div>
+  </div>
+  <div class="row">
+    <button [disabled]="lobby.players === undefined || lobby.players.length < 1" (click)="goToNext()" class="btn btn-success">Select game <i class="fa fa-arrow-right ml-2"></i></button>
+  </div>
+</div>
+

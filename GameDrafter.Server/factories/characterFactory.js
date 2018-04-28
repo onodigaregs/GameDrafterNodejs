@@ -6,12 +6,7 @@ class CharacterFactory {
     }
     getCharacters(gameName) {
         var content = fs.readFileSync('./gamedata/' + gameName + '.json');
-        let chars = this.jsonParse(content);
-        return chars;
-    }
-    jsonParse(data) {
-        let characters = JSON.parse(data);
-        return characters;
+        return JSON.parse(content);
     }
 }
 exports.CharacterFactory = CharacterFactory;

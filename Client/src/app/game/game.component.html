@@ -1,0 +1,7 @@
+<h2>{{title}}</h2>
+<div class="row">
+  <div *ngIf="games.length > 0">
+    <div *ngFor="let game of games"><img (click)="goToDraft(game)" src="{{game.icon}}" /></div>
+  </div>
+  {{lobby.game.name}}
+</div>

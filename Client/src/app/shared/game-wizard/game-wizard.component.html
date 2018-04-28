@@ -1,0 +1,46 @@
+<div class="board-inner" id="status-buttons">
+  <ul class="nav nav-tabs row" id="myTab">
+    <div class="liner"></div>
+    <!-- circular user icon -->
+    <li>
+    </li>
+    <!-- circular tasks icon -->
+    <li class="col">
+      <a routerLink="/lobby" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" data-toggle="tab">
+        <span class="round-tabs two">
+          <span class="fa-stack fa-3x">
+            <i class="fa fas fa-circle fa-stack-2x"></i>
+            <i class="text-white fa  fa-home fa-stack-1x"></i>
+          </span>
+        </span>
+      </a>
+    </li>
+
+    <!-- circular home icon -->
+    <li class="col">
+      <a routerLink="/game" routerLinkActive="active" data-toggle="tab">
+        <span class="round-tabs three">
+          <span class="fa-stack fa-3x">
+            <i class="fa fas fa-circle fa-stack-2x"></i>
+            <i class="text-white fa  fa-gamepad fa-stack-1x"></i>
+          </span>
+          
+        </span>
+      </a>
+    </li>
+
+    <!-- circular ok icon -->
+    <li class="col">
+      <a routerLink="/draft" routerLinkActive="active" data-toggle="tab">
+        <span class="round-tabs three">
+          <span class="fa-stack fa-3x">
+            <i class="fa fas fa-circle fa-stack-2x"></i>
+            <i class="text-white fa  fa-check fa-stack-1x"></i>
+          </span>    
+        </span>
+      </a>
+    </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</div>

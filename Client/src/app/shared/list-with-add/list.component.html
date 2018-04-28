@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="currentOjb" /> <i (click)="addToCollection()" class="fa fa-plus">Add</i>
+
+<ul>
+  <li *ngFor="let obj of collection">
+    {{obj}}
+  </li>
+</ul>

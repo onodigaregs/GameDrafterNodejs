@@ -1,0 +1,52 @@
+body {
+
+}
+
+.col {
+  margin-bottom:5px;
+}
+
+.playericon {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  background-color: blue;
+  line-height: 100px;
+}
+
+.characterContainer {
+  display: inline-block;
+}
+
+.nav.nav-tabs {
+  height: 90px;
+}
+
+  .nav.nav-tabs .liner {
+    position: relative;
+    top: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 2px;
+    width: 100%;
+    background-color: gray;
+    opacity: 0.7;
+  }
+.nav.nav-tabs li.col {
+    text-align: center;
+}
+
+  .nav.nav-tabs span.fa-stack i.fa-stack-2x {
+    color: black;
+  }
+  .nav.nav-tabs span.fa-stack i.fa-stack-1x {
+    color: white;
+  }
+
+  .nav.nav-tabs li.col:last-of-type {
+  }
+
+  .tab-content {
+    text-align: center;
+  }

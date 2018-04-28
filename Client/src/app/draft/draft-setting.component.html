@@ -1,0 +1,24 @@
+<h2>{{title}}</h2>
+<div class="row">
+  <div class="btn-group btn-group-toggle" ngbRadioGroup name="lobbyType" [(ngModel)]="draft.type">
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="draft.type" value="AR" (ngModelChange)="onDraftTypeChange($event)"> All Random
+    </label>
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="draft.type" value="CM" (ngModelChange)="onDraftTypeChange($event)"> Captain's mode
+    </label>
+    {{draft.type}}
+  </div>
+</div>
+<div class="row">
+  <ul>
+    <li *ngFor="let player of lobby.players">
+      <div class="playericon">{{player}}</div>
+    </li>
+  </ul>
+</div>
+<div class="row">
+  <div class="col">
+    <drafter-draft-item [(items)]="draftItems"></drafter-draft-item>
+  </div>
+</div>
