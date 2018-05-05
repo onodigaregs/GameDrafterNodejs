@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CharacterService {
-  apiUrl = "http://localhost:1337/api/";
+  apiUrl = "http://localhost:3000/api/";
   constructor(private http: HttpClient) { }
 
 

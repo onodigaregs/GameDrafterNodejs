@@ -6,7 +6,7 @@ import { Game } from '../models/game.model';
 
 @Injectable()
 export class GameService {
-  apiUrl = "http://localhost:1337/api/";
+  apiUrl = "http://localhost:3000/api/";
   constructor(private http: HttpClient) { }
 
   getGames(): Game[] {
