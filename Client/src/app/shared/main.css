@@ -6,19 +6,81 @@ body {
   margin-bottom:5px;
 }
 
+.container-fluid {
+ max-width: 1000px;
+ margin: auto;
+}
+
+.grid{
+  display: inline-grid;
+}
+
 .playericon {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin: auto;
   text-align: center;
   background-color: blue;
-  line-height: 100px;
+  line-height: 70px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  color: white;
+}
+
+  #overlay .title {
+    font-size: 6em;
+  }
+
+.pickedCharacter {
+  width: 90px;
+  height: 70px;
+}
+
+.pickedCharacter img {
+  height: auto;
+  width: auto;
+  max-width: 40px;
+  max-height: 40px;
+
+}
+#overlay .subtitle {
+  font-size: 3em;
+}
+
+.drafterText {
+  transform:translateX(210px);
+  text-align:center;
+  font-size: 2em;
+  line-height:2em;
+}
+
+.draftericon {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  background-color: blue;
+  line-height: 70px;
 }
 
 .characterContainer {
   display: inline-block;
 }
-
+.btn-primary.btn.active {
+  color: #fff;
+  background-color: #1e7e34;
+  border-color: #1c7430;
+}
 .nav.nav-tabs {
   height: 90px;
 }
@@ -26,8 +88,8 @@ body {
   .nav.nav-tabs .liner {
     position: relative;
     top: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     height: 2px;
     width: 100%;
     background-color: gray;

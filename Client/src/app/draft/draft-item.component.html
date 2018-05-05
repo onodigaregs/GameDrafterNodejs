@@ -1,6 +1,14 @@
-<div *ngFor="let draftItem of items" class="characterContainer btn btn-primary">
+<div *ngFor="let draftItem of items" (click)="characterClicked(draftItem)" class="characterContainer btn btn-primary">
   <img src="{{draftItem.character.Icon}}" />
   <p>{{draftItem.character.Name}}</p>
 </div>
-<div class="row" *ngIf="items && items.length > 0">
+<div class="row" *ngIf="draftInput">
+
+    <p>Okay time for {{draftInput.playerName}}" to {{draftInput.action}}</p>
+    <div *ngFor="let character of draftInput.characters" (click)="characterClicked(character)" class="characterContainer btn btn-primary">
+      <img src="{{character.Icon}}" />
+      <p>{{character.Name}}</p>
+    </div>
+
 </div>
+

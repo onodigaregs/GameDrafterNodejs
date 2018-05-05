@@ -14,7 +14,10 @@ import { LobbyDataService } from './services/lobby.data.service';
 import { GameComponent } from './game/game.component';
 import { DraftSettingComponent } from './draft/draft-setting.component';
 import { DraftItemComponent } from './draft/draft-item.component';
-  
+import { DraftStartComponent } from './draft/draft-start.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DraftBracketComponent } from './draft/draft-bracket.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +26,13 @@ import { DraftItemComponent } from './draft/draft-item.component';
     LobbyComponent,
     GameComponent,
     DraftSettingComponent,
-    DraftItemComponent
+    DraftItemComponent,
+    DraftStartComponent,
+    DraftBracketComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     NgbModule.forRoot(),
     AppRoutingModule,

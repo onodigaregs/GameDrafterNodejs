@@ -1,24 +1,40 @@
 <h2>{{title}}</h2>
-<div class="row">
-  <div class="btn-group btn-group-toggle" ngbRadioGroup name="lobbyType" [(ngModel)]="draft.type">
+<div class="row mb-2">
+  <label style="line-height:30px;" class="mr-1" for="draftTypeBtnGrp">Draft Mode:</label>
+  <div class="btn-group btn-group-toggle" ngbRadioGroup name="lobbyType" [(ngModel)]="draft.type" id="draftTypeBtnGrp">
     <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" [ngModel]="draft.type" value="AR" (ngModelChange)="onDraftTypeChange($event)"> All Random
+      <input ngbButton type="radio" [ngModel]="draft.type" value="All random" (ngModelChange)="onDraftTypeChange($event)"> All Random
     </label>
     <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" [ngModel]="draft.type" value="CM" (ngModelChange)="onDraftTypeChange($event)"> Captain's mode
+      <input ngbButton type="radio" [ngModel]="draft.type" value="Captains draft" (ngModelChange)="onDraftTypeChange($event)"> Captain's mode
     </label>
-    {{draft.type}}
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="draft.type" value="Single draft" (ngModelChange)="onDraftTypeChange($event)"> Single draft
+    </label>
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="draft.type" value="All pick" (ngModelChange)="onDraftTypeChange($event)"> All pick
+    </label>
+  </div>
+  </div>
+<div class="row mb-2">
+  <label style="line-height:30px;" class="mr-1" for="stockStrikeOut">Stock mode:</label>
+  <div class="btn-group btn-group-toggle" ngbRadioGroup name="stock" [(ngModel)]="stock" id="stockStrikeOut">
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="stock" value="stock"> Stock
+    </label>
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [ngModel]="stock" value="strikeout"> Strike out
+    </label>
   </div>
 </div>
-<div class="row">
-  <ul>
-    <li *ngFor="let player of lobby.players">
-      <div class="playericon">{{player}}</div>
-    </li>
-  </ul>
+<div class="row mb-2">
+  <label for="renderBracket">Render brackets </label>
+  <input id="renderBracket" type="checkbox" [checked]="draft.renderBrackets" (change)="draft.renderBrackets = !draft.renderBrackets" />  
 </div>
-<div class="row">
-  <div class="col">
-    <drafter-draft-item [(items)]="draftItems"></drafter-draft-item>
-  </div>
+<div class="row mb-2" *ngIf="draft.renderBrackets">
+  <label>Bracket settings to be added</label>
 </div>
+
+<button [disabled]="draft.type === undefined || stock === undefined" (click)="startDraft()" class="btn btn-success">Start draft!</button>
+
+

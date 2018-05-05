@@ -1,0 +1,25 @@
+<!--<div [hidden]="draftHasStarted" id="overlay">{{draftHasStarted}}
+  <div class="center title">Get Ready!</div>
+  <div class="center"><span>{{currentOperation}}</span></div>
+  <div class="center subtitle">{{countdown}}</div>
+</div>-->
+
+<div *ngFor="let player of players" class="row">
+  <button class="btn btn-primary draftericon">{{player.name}}</button>
+  <div *ngFor="let picked of player.pickedCharacters" class="pickedCharacter btn btn-success">
+  <img src="{{picked.Icon}}" />
+  <p>{{picked.Name}}</p>
+</div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <drafter-draft-item [(draftInput)]="currentDraftInput" (itemChanged)="draftActionFinished($event)"></drafter-draft-item>
+  </div>
+</div>
+
+<div class="row" *ngIf="draftFinished">
+  <drafter-game-wizard-bracket [players]="players" [(bracketType)]="bracketType"></drafter-game-wizard-bracket>
+</div>
+
+
